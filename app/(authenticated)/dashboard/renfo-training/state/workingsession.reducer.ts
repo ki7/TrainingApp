@@ -47,9 +47,9 @@ export function workingSessionReducer(
       console.log("%cNext state:", "color:#34d399", newState);
       console.groupEnd();
     }
-
-    return newState;
+    return newState as WorkingSessionState;
   };
+  
   switch (action.type) {
     case "SET_EXERCISE":
       return _({ ...state, exerciseId: action.exerciseId });
@@ -57,21 +57,21 @@ export function workingSessionReducer(
     case "ADD_SET":
       return _({
         ...state,
-        sets: [...state.sets, { id: crypto.randomUUID(), reps: 0, weight: 0 }],
+        sets: [...(state.sets || []), { id: crypto.randomUUID(), reps: 0, weight: 0 }],
       });
 
     case "UPDATE_SET":
       return _({
         ...state,
-        sets: state.sets.map((s) =>
+        sets: state.sets?.map((s) =>
           s.id === action.id ? { ...s, ...action } : s,
-        ),
+        ) ?? [],
       });
 
     case "REMOVE_SET":
       return _({
         ...state,
-        sets: state.sets.filter((s) => s.id !== action.id),
+        sets: state.sets?.filter((s) => s.id !== action.id) ?? [],
       });
 
     case "SET_NOTES":

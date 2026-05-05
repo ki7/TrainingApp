@@ -49,7 +49,7 @@ export default function RenfoTrainingPage() {
 
         {/* Sets */}
         <div className="space-y-2">
-          {state.sets.map((set) => (
+          {state?.sets?.map((set) => (
             <div key={set.id} className="flex gap-2 items-center">
               <input
                 type="number"
@@ -98,7 +98,7 @@ export default function RenfoTrainingPage() {
 
         {/* Notes */}
         <textarea
-          value={state.notes}
+          value={state.notes ?? ""}
           onChange={(e) =>
             dispatch({ type: "SET_NOTES", notes: e.target.value })
           }
@@ -109,7 +109,7 @@ export default function RenfoTrainingPage() {
         {/* Save */}
         <button
           onClick={handleSave}
-          disabled={state.isSaving}
+          disabled={state.isSaving ?? undefined}
           className="px-4 py-2 bg-green-600 text-white rounded"
         >
           {state.isSaving ? "Saving..." : "Save Session"}

@@ -17,7 +17,7 @@ export default function Workingsession() {
     <div className="p-4 space-y-4">
       <button
         onClick={() => saveSessionOptimistic(state, dispatch)}
-        disabled={state.isSaving}
+        disabled={state.isSaving ?? undefined}
         className="px-4 py-2 bg-blue-600 text-white rounded"
       >
         {state.isSaving ? "Saving..." : "Save Session"}

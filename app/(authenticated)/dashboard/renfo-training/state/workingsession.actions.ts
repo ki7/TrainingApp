@@ -14,8 +14,8 @@ export async function saveSessionOptimistic(
 
   try {
     await saveSessionAction({
-      sets: state.sets.map(({ reps, weight }) => ({ reps, weight })),
-      notes: state.notes,
+      sets: state.sets?.map(({ reps, weight }) => ({ reps, weight })) ?? [],
+      notes: state.notes ?? "",
     })
 
     dispatch({ type: "SAVE_SUCCESS" })

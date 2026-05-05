@@ -17,7 +17,7 @@ export function ExerciseForm() {
   );
 
   const addSet = () => {
-    setSets((prev) => [...prev, { id: uuid(), reps: "", weight: "" }]);
+    setSets((prev) => [...prev, { id: uuid(), reps: 0, weight: 0 }]);
   };
 
   const updateSet = (id: string, updated: ExerciseSet) => {
@@ -30,7 +30,7 @@ export function ExerciseForm() {
 
   const handleSave = async () => {
     const cleaned = sets.filter(
-      (s) => s.reps !== "" && s.weight !== "" && s.reps > 0 && s.weight >= 0,
+      (s) => s.reps !== 0 && s.weight !== 0 && s.reps > 0 && s.weight >= 0,
     );
 
     if (cleaned.length === 0) {
@@ -43,8 +43,8 @@ export function ExerciseForm() {
 
     try {
       const sets = cleaned.map((s) => ({
-        reps: parseInt(s.reps,10),
-        weight: parseInt(s.weight,10),
+        reps: s.reps, 
+        weight: s.weight,
       }));
 
       const res = await fetch("/api/exercise-sets", {

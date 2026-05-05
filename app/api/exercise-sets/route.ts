@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
   try {
     for (const row of rows) {
       console.log("INSERTING ROW:", row);
-      await db.insert(exerciseSets).values(row);
+      await db?.insert(exerciseSets).values({ id: "row.id ?? uuid()", ...row });
       console.log("DB INSERT RESULT:", row);
     }
     // const result = await db.insert(exerciseSets).values(rows);

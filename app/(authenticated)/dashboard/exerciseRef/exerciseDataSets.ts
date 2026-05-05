@@ -21,7 +21,7 @@ const exercises = EXERCISES.reduce(
 const muscles = new Set();
 EXERCISES.reduce((muscles, exercises) => {
   Object.keys(exercises.muscles).forEach((key) => {
-    muscles.add(...[...exercises.muscles[key]]);
+    muscles.add([...(exercises.muscles[key as keyof typeof exercises.muscles] as string[])]);
   });
 
   return muscles;

@@ -1,8 +1,9 @@
 export type WorkingSessionState = {
+  error: string | null;
   exerciseId: string | null;
-  sets: Array<{ id: string; reps: number; weight: number }>;
-  notes: string;
-  isSaving: boolean;
+  sets: Array<{ id: string; reps: number; weight: number }> | null;
+  notes: string | null;
+  isSaving: boolean | null;
 };
 
 export type WorkingSessionAction =
@@ -11,7 +12,10 @@ export type WorkingSessionAction =
   | { type: "UPDATE_SET"; id: string; reps?: number; weight?: number }
   | { type: "REMOVE_SET"; id: string }
   | { type: "SET_NOTES"; notes: string }
-  | { type: "START_SAVING" }
+  | { type: "START_SAVING"; snapshot: WorkingSessionState }
+  | { type: "SAVE_SUCCESS" }
+  | { type: "SAVE_ERROR"; error: string; snapshot: WorkingSessionState }
+  | { type: "ROLLBACK"; snapshot: WorkingSessionState }
   | { type: "END_SAVING" };
 
 export const initialWorkingSessionState: WorkingSessionState = {
@@ -19,9 +23,10 @@ export const initialWorkingSessionState: WorkingSessionState = {
   sets: [],
   notes: "",
   isSaving: false,
+  error: null,
 };
 
-let actionId = 0
+let actionId = 0;
 export function workingSessionReducer(
   state: WorkingSessionState,
   action: WorkingSessionAction,
@@ -35,14 +40,14 @@ export function workingSessionReducer(
       console.groupCollapsed(
         `%c${name} %c#${action.type} ${++actionId}`,
         "color:#4ade80;font-weight:bold",
-        "color:#60a5fa"
-      )
-      console.log("%cAction:", "color:#facc15", action)
-      console.log("%cPrev state:", "color:#f87171", state)
-      console.log("%cNext state:", "color:#34d399", newState)
-      console.groupEnd()
+        "color:#60a5fa",
+      );
+      console.log("%cAction:", "color:#facc15", action);
+      console.log("%cPrev state:", "color:#f87171", state);
+      console.log("%cNext state:", "color:#34d399", newState);
+      console.groupEnd();
     }
-    
+
     return newState;
   };
   switch (action.type) {

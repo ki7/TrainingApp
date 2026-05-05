@@ -11,7 +11,7 @@ import {
   type Laterality,
 } from "./exerciseData";
 
-import SETS from "./exerciseDataSets";
+import {SETS} from "./exerciseDataSets";
 
 export default function ExerciseDB() {
   const [search, setSearch] = useState("");

@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import type { MuscleId } from "@/types/muscles";
+import type { MuscleId } from "../types/muscles";
 
 type Props = {
   onMuscleClick: (muscleId: MuscleId) => void;
@@ -325,10 +325,7 @@ export const HumanBodyFrontSvg: React.FC<Props> = ({ onMuscleClick }) => {
       </g>
 
       {/* Brachial gauche */}
-      <g
-        className="muscle-area"
-        onClick={() => onMuscleClick("brachial")}
-      >
+      <g className="muscle-area" onClick={() => onMuscleClick("brachial")}>
         <path
           d="
             M 84 215
@@ -342,10 +339,7 @@ export const HumanBodyFrontSvg: React.FC<Props> = ({ onMuscleClick }) => {
       </g>
 
       {/* Brachial droit */}
-      <g
-        className="muscle-area"
-        onClick={() => onMuscleClick("brachial")}
-      >
+      <g className="muscle-area" onClick={() => onMuscleClick("brachial")}>
         <path
           d="
             M 176 215
@@ -549,10 +543,7 @@ export const HumanBodyFrontSvg: React.FC<Props> = ({ onMuscleClick }) => {
       </g>
 
       {/* Adducteurs (zone interne cuisse) */}
-      <g
-        className="muscle-area"
-        onClick={() => onMuscleClick("adducteurs")}
-      >
+      <g className="muscle-area" onClick={() => onMuscleClick("adducteurs")}>
         <path
           d="
             M 112 247
@@ -567,10 +558,7 @@ export const HumanBodyFrontSvg: React.FC<Props> = ({ onMuscleClick }) => {
       </g>
 
       {/* Sartorius (trajet oblique simplifié) */}
-      <g
-        className="muscle-area"
-        onClick={() => onMuscleClick("sartorius")}
-      >
+      <g className="muscle-area" onClick={() => onMuscleClick("sartorius")}>
         <path
           d="
             M 112 247

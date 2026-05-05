@@ -12,7 +12,7 @@ export default function RenfoTrainingPage() {
     initialWorkingSessionState,
   );
   const handleSave = async () => {
-    dispatch({ type: "START_SAVING" });
+    dispatch({ type: "START_SAVING", snapshot: state });
 
     // simulate async save
     await new Promise((r) => setTimeout(r, 600));

@@ -1,12 +1,24 @@
 // app/muscle-map/page.tsx (Next.js 13+ app router)
 "use client";
 
+declare global {
+  interface Window {
+    HumanAPI: any;
+  }
+}
+
+import { ReactNode } from "react";
 import React, { useState, useRef, useEffect, Children } from "react";
 import { HumanBodySvg } from "./components/HumanBodySvg";
 import { HumanBodyFrontSvg } from "./components/HumanBodyFrontSvg";
-import { HumanViewer } from "./components/HumanViewer";
+// import { HumanViewer } from "./components/HumanViewer";
 import { MUSCLE_BY_ID, type MuscleId } from "./types/muscles";
 import Script from "next/script";
+
+type HumanAPI_ButtonProps = {
+  children: ReactNode;
+  onClick: () => void;
+};
 
 export default function MuscleMapPage() {
   const [selectedMuscle, setSelectedMuscle] = useState<MuscleId | null>(null);
@@ -32,10 +44,6 @@ export default function MuscleMapPage() {
       const human = new (iframe.contentWindow as any).HumanAPI("myViewer");
       console.log({ human });
       // Example: wait for viewer to load
-
-
-
-     
     };
   }, []);
 
@@ -57,6 +65,7 @@ export default function MuscleMapPage() {
       // human.send("camera.orbit", { yaw: 0.4 });
     })();
 
+    /* 
     human.on("labels.moved", (moved) => {
       console.log("label moved ", moved);
     });
@@ -71,7 +80,8 @@ export default function MuscleMapPage() {
 
     human.on("labels.picked", (picked) => {
       console.log("label picked ", picked);
-    });
+    }); 
+    */
     // human.send("camera.set", {
     //   position: { z: -25 },
     //   animate: true,
@@ -88,66 +98,77 @@ export default function MuscleMapPage() {
     }); */
   }
 
-  function B({children, click}): {children: React.ReactNode, click: () => void} {
+  function HumanAPI_Button({ children, onClick }: HumanAPI_ButtonProps) {
     return (
-    <button
-      onClick={click}
-      className="bg-blue-600 text-white px-4 py-2 rounded text-sm mb-5"
-    >
-      {children}
-    </button>,
-  )};
+      <button
+        onClick={onClick}
+        className="bg-blue-600 text-white px-4 py-2 rounded text-sm mb-5"
+      >
+        {children}
+      </button>
+    );
+  }
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-slate-50 p-4">
-      <B click={() => {
- console.log("Get structures");
-humanApi.on("scene.objectsSelected", function(event) {
-    var selected = [];
-    var deselected = [];
+      <HumanAPI_Button
+        onClick={() => {
+          console.log("Get structures");
+          humanApi.on("scene.objectsSelected", function (event: any) {
+            var selected: string[] = [];
+            var deselected: string[] = [];
 
-    // Event contains a map of objects that were selected
-    // or deselected by this update.
-    Object.keys(event).forEach(function(objectId) {
-        if (event[objectId]) {
-            selected.push(objectId);
-        } else {
-            deselected.push(objectId);
-        }
-    });
+            // Event contains a map of objects that were selected
+            // or deselected by this update.
+            Object.keys(event).forEach(function (objectId) {
+              if (event[objectId]) {
+                selected.push(objectId);
+              } else {
+                deselected.push(objectId);
+              }
+            });
 
-    console.log("Selected objects: " + selected.join(", "));
-    console.log("Deslected objects: " + deselected.join(", "));
-});
-    humanApi.send("human.info", function(human) {
-    console.log("Gathering human info:");
-    console.log(JSON.stringify(human));
-});
- 
-      }}>Get structures</B>
-      <B click={() => {
-        const objectId = "human_20_male_muscular_system-left_frontalis_ID";
-        humanApi.send("scene.colorObject", {
+            console.log("Selected objects: " + selected.join(", "));
+            console.log("Deslected objects: " + deselected.join(", "));
+          });
+          humanApi.send("human.info", function (human: any) {
+            console.log("Gathering human info:");
+            console.log(JSON.stringify(human));
+          });
+        }}
+      >
+        Get structures
+      </HumanAPI_Button>
+      <HumanAPI_Button
+        onClick={() => {
+          const objectId = "human_20_male_muscular_system-left_frontalis_ID";
+          humanApi.send("scene.colorObject", {
             objectId,
             tintColor: [1, 0, 0],
             brightness: 0.1,
             saturation: -0.5,
             contrast: 0.5,
-            opacity: 1.0
-        });
-        humanApi.send("camera.set", { objectId: objectId, animate: true });
-      }}>Color Object</B>
-      <B click={() => {
-        console.log("Pick or hover over something!");
+            opacity: 1.0,
+          });
+          humanApi.send("camera.set", { objectId: objectId, animate: true });
+        }}
+      >
+        Color Object
+      </HumanAPI_Button>
+      <HumanAPI_Button
+        onClick={() => {
+          console.log("Pick or hover over something!");
           // humanApi.send("camera.set", { objectId: "human_09_male_skeletal_system-bones_of_head_ID", animate: true });
 
-          humanApi.on("scene.picked", function (pickEvent) {
+          humanApi.on("scene.picked", function (pickEvent: any) {
             console.log("'scene.picked' event: " + JSON.stringify(pickEvent));
             console.log(pickEvent);
             // humanApi.send("camera.set", { objectId: pickEvent.objectId, animate: true });
           });
-
-      }}>Scene.picked event</B>
+        }}
+      >
+        Scene.picked event
+      </HumanAPI_Button>
       <button
         onClick={() => {
           humanApi.send("camera.set", {

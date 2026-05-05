@@ -7,6 +7,7 @@ export type MuscleId =
   | "deltoide_anterieur"
   | "deltoide_median"
   // Poitrine
+  | "grand_pectoral"
   | "grand_pectoral_claviculaire"
   | "grand_pectoral_sternal"
   // Bras
@@ -15,7 +16,12 @@ export type MuscleId =
   | "brachioradialis"
   | "flexeurs_avant_bras"
   | "extenseurs_avant_bras"
+  // Dos
+  | "grand_dorsal"
+  // Glutes 
+  | "grand_fessier" 
   // Tronc / abdos
+  | "droit_abdomen"
   | "droit_abdomen_superieur"
   | "droit_abdomen_inferieur"
   | "obliques_externes"
@@ -28,6 +34,7 @@ export type MuscleId =
   | "quadriceps_vaste_medial"
   | "quadriceps_vaste_lateral"
   // Jambes
+  | "quadriceps"
   | "tibial_anterieur"
   | "gastroc_medial_ant"
   | "gastroc_lateral_ant";

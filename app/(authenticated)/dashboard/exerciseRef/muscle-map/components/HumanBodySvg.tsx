@@ -2,7 +2,7 @@
 "use client";
 
 import React from "react";
-import type { MuscleId } from "@/types/muscles";
+import type { MuscleId } from "../types/muscles";
 
 type Props = {
   onMuscleClick: (muscleId: MuscleId) => void;

@@ -18,6 +18,7 @@ export async function checkDatabaseExists(): Promise<boolean> {
   if (!dbName) return false;
 
   try {
+    
     await turso.databases.get(dbName);
     return true;
   } catch (error) {

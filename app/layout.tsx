@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`bg-rich-black overscroll-none ${inter.className}`}>
+        <body className={`bg-rich-white overscroll-none ${inter.className}`}>
           {children}
         </body>
       </html>

@@ -3,8 +3,8 @@ export type ExerciseType = "bench" | "squat" | "deadlift" | "row" | "curl";
 
 export interface ExerciseSet {
   id: string;
-  reps: number | "";
-  weight: number | "";
+  reps: number;
+  weight: number ;
 }
 
 export interface PersistedExerciseSet {

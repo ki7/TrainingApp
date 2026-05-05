@@ -15,6 +15,34 @@
       "when": 1775627394339,
       "tag": "0001_mighty_jigsaw",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1775660594094,
+      "tag": "0002_sudden_elektra",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1775726761278,
+      "tag": "0003_naive_leopardon",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1775727243389,
+      "tag": "0004_powerful_shiver_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1775727307361,
+      "tag": "0005_wealthy_loki",
+      "breakpoints": true
     }
   ]
 }

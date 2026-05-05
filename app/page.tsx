@@ -21,10 +21,10 @@ export default function Page() {
           fill="currentColor"
         ></path>
       </svg>
-      <h1 className="text-5xl font-black text-center tracking-tight text-white">
+      <h1 className="text-5xl font-black text-center tracking-tight text-black">
         Turso Per User Starter
       </h1>
-      <p className="text-lg text-white/60">
+      <p className="text-lg text-black/60">
         Database per user demo &mdash;{" "}
         <Link href="/sign-up" className="underline text-[#4FF8D2]">
           Sign up
@@ -37,14 +37,14 @@ export default function Page() {
       <div className="flex border border-white/5 rounded divide-x divide-white/5">
         <a
           href="https://turso.tech"
-          className="text-white hover:text-aquamarine hover:bg-white/5 px-6 py-2.5"
+          className="text-black hover:text-aquamarine hover:bg-white/5 px-6 py-2.5"
           target="_blank"
         >
           What is Turso?
         </a>
         <a
           href="https://github.com/notrab/turso-platforms-starter"
-          className="text-white hover:text-aquamarine hover:bg-white/5 px-6 py-2.5"
+          className="text-black hover:text-aquamarine hover:bg-white/5 px-6 py-2.5"
           target="_blank"
         >
           GitHub Repo

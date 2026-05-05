@@ -43,8 +43,8 @@ export function ExerciseForm() {
 
     try {
       const sets = cleaned.map((s) => ({
-        reps: Number(s.reps),
-        weight: Number(s.weight),
+        reps: parseInt(s.reps,10),
+        weight: parseInt(s.weight,10),
       }));
 
       const res = await fetch("/api/exercise-sets", {
@@ -85,7 +85,7 @@ export function ExerciseForm() {
       <div className="flex items-center gap-3">
         <button
           onClick={addSet}
-          className="bg-blue-600 text-white px-4 py-2 rounded text-sm"
+          className="bg-blue-600 text-black px-4 py-2 rounded text-sm"
         >
           Ajouter une série
         </button>
@@ -93,7 +93,7 @@ export function ExerciseForm() {
         <button
           onClick={handleSave}
           disabled={saving || sets.length === 0}
-          className="bg-emerald-600 disabled:bg-emerald-300 text-white px-4 py-2 rounded text-sm"
+          className="bg-emerald-600 disabled:bg-emerald-300 text-black px-4 py-2 rounded text-sm"
         >
           {saving ? "Enregistrement..." : "Enregistrer en base"}
         </button>

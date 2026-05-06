@@ -136,7 +136,7 @@ export const HumanBodySvg: React.FC<Props> = ({ onMuscleClick }) => {
       {/* Grand pectoral */}
       <g
         className="muscle-area"
-        onClick={() => onMuscleClick("grand_pectoral")}
+        onClick={() => onMuscleClick("grand_pectoral_claviculaire")}
       >
         <path
           d="
@@ -175,7 +175,7 @@ export const HumanBodySvg: React.FC<Props> = ({ onMuscleClick }) => {
       {/* Abdominaux (droit de l'abdomen) */}
       <g
         className="muscle-area"
-        onClick={() => onMuscleClick("droit_abdomen")}
+        onClick={() => onMuscleClick("droit_abdomen_superieur")}
       >
         <path
           d="
@@ -284,3 +284,4 @@ export const HumanBodySvg: React.FC<Props> = ({ onMuscleClick }) => {
     </svg>
   );
 };
+

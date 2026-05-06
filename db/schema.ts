@@ -63,3 +63,50 @@ export const sets = sqliteTable("sets", {
   avgHeartRate: integer("avg_heart_rate"),
   createdAt: text("created_at").default("CURRENT_TIMESTAMP"),
 });
+
+// ─── ENUMS ───────────────────────────────────
+export const categoryEnum = [
+  "machine",
+  "bodyweight",
+  "barbell",
+  "dumbbell",
+] as const;
+export const lateralityEnum = ["bilateral", "unilateral", "both"] as const;
+
+// ─── EXERCISE ────────────────────────────────
+export const exercise = sqliteTable("exercise", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  name: text("name").notNull().unique(),
+  category: text("category", { enum: categoryEnum }).notNull(),
+  laterality: text("laterality", { enum: lateralityEnum }).notNull(),
+});
+
+// ─── MUSCLE GLOBAL ───────────────────────────
+export const muscle = sqliteTable("muscle", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  name: text("name").notNull().unique(), // "Grand pectoral"
+});
+
+// ─── MUSCLE HEAD (CHEF / FAISCEAU) ──────────
+export const muscleHead = sqliteTable("muscle_head", {
+  id: integer("id").primaryKey({ autoIncrement: true }),
+  muscleId: integer("muscle_id")
+    .notNull()
+    .references(() => muscle.id, { onDelete: "cascade" }),
+
+  name: text("name").notNull(), // "faisceau sternal", "vaste médial", etc.
+  biodigitalId: text("biodigital_id"), // "pectoralis_major_sternal_head_muscle"
+});
+
+// ─── PIVOT EXERCISE ↔ MUSCLE HEAD ───────────
+export const exerciseMuscle = sqliteTable("exercise_muscle", {
+  exerciseId: integer("exercise_id")
+    .notNull()
+    .references(() => exercise.id, { onDelete: "cascade" }),
+
+  muscleHeadId: integer("muscle_head_id")
+    .notNull()
+    .references(() => muscleHead.id, { onDelete: "cascade" }),
+
+  role: text("role").notNull(), // "primary" | "secondary" | "tertiary"
+});

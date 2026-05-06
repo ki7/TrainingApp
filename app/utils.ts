@@ -44,7 +44,7 @@ export async function getDatabaseClient() {
     return drizzle(client, { schema });
   } catch (error) {
     console.error("Failed to create database client:", error);
-    return null;
+    return {} as ReturnType<typeof drizzle>;
   }
 }
 

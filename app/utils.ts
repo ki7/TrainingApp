@@ -4,8 +4,9 @@ import { createClient as createTursoClient } from "@tursodatabase/api";
 import md5 from "md5";
 import { redirect } from "next/navigation";
 import { drizzle } from "drizzle-orm/libsql";
-
 import * as schema from "@/db/schema";
+// console.log("{ schema }");
+// console.log({ schema });
 
 const turso = createTursoClient({
   token: process.env.TURSO_API_TOKEN!,
@@ -18,7 +19,6 @@ export async function checkDatabaseExists(): Promise<boolean> {
   if (!dbName) return false;
 
   try {
-    
     await turso.databases.get(dbName);
     return true;
   } catch (error) {
@@ -34,17 +34,27 @@ export async function getDatabaseClient() {
     console.error("Failed to create database client: URL is null.");
     return redirect("/welcome");
   }
-
   try {
     const client = createLibsqlClient({
       url,
       authToken: process.env.TURSO_GROUP_AUTH_TOKEN,
     });
-
-    return drizzle(client, { schema });
   } catch (error) {
     console.error("Failed to create database client:", error);
-    return {} as ReturnType<typeof drizzle>;
+    return drizzle(createLibsqlClient({ url: "file:dummy", authToken: "" }), {
+      schema,
+    });
+    /* //
+          return {} as ReturnType<typeof drizzle>;
+          You need to return a dummy with the schema or you will have TS errors everywhere because the client is used in many places. The dummy won't be used because if the client creation fails, you are redirected to /welcome, but it allows the app to compile without errors.
+
+          èrror on buil or tsc --noEmit or npm run build
+          app/(authenticated)/dashboard/todos/todos.tsx:11:36 - error TS2339: 
+          Property 'todos' does not exist on type '{} | { todos: RelationalQueryBuilder<"async", typeof import("/Users/ki7/Developer/MiniAppsAndPocs/TrainingApp/db/schema/index"), ExtractTablesWithRelations<typeof import("/Users/ki7/Developer/MiniAppsAndPocs/TrainingApp/db/schema/index")>, { ...; }>; ... 9 more ...; exerciseMuscle: RelationalQueryBuilder<...>; }'.
+        Property 'todos' does not exist on type '{}'.
+
+      11   const todos = await client.query.todos.findMany(); 
+      */
   }
 }
 

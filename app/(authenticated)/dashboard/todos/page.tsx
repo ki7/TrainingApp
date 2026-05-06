@@ -1,4 +1,4 @@
-
+import { Todos } from "./todos";
 const MenuData: Array<[string, string, ...string[]]> = [
   ["Renfo Training page", "renfo-training"],
   ["Exercise page", "sets", "Exercise Reference"],
@@ -42,7 +42,6 @@ export default async function Page() {
         {/* <Menu data={MenuData} /> */}
 
         {[
-          ["Todos", "todos"],
           ["Renfo Training page", "renfo-training"],
           ["Exercise page", "sets", "Exercise Reference"],
           ["Exercise Reference", "exerciseRef"],
@@ -55,7 +54,14 @@ export default async function Page() {
             {label}
           </a>
         ))}
+        <h2 className="text-2xl font-black tracking-tight text-black mt-10">
+          Todos
+        </h2>
+        <p className="text-black/60">
+          The todos you add below are created inside your own database.
+        </p>
       </div>
+      <Todos />
     </div>
   );
 }

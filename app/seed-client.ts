@@ -2,10 +2,10 @@ import "dotenv/config";
 import { drizzle } from "drizzle-orm/libsql";
 import { createClient } from "@libsql/client";
 import * as schema from "@/db/schema";
+// console.log('seed-client.ts', { schema });
 const options = {
   url: process.env.TURSO_DATABASE_URL!,
   authToken: process.env.TURSO_GROUP_AUTH_TOKEN!,
 };
-console.log({ options });
 
 export const db = drizzle(createClient(options), { schema });

@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 
 import { checkDatabaseExists } from "../utils";
 import { Header } from "./header";
+import { Nav } from "@/ui/Nav";
 
 export default async function Layout({
   children,
@@ -15,6 +16,7 @@ export default async function Layout({
   return (
     <>
       <Header />
+      <Nav />
       <div className="max-w-2xl mx-auto px-6 py-12">{children}</div>
     </>
   );

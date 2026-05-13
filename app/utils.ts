@@ -64,7 +64,9 @@ export function getDatabaseName(): string | null {
 }
 
 function getDatabaseUrl(dbName: string | null): string | null {
-  return dbName ? `${dbName}-${process.env.TURSO_ORG}.turso.io` : null;
+  const DatabaseUrl = dbName ? `${dbName}-${process.env.TURSO_ORG}.turso.io` : null;
+  // console.log(DatabaseUrl); ==> c03b5e1feb5a68efb32f221f3836bab1-kai7.turso.io
+  return `${process.env.TURSO_DATABASE_NAME}-${process.env.TURSO_ORG}.turso.io` ;
 }
 
 function getLibsqlUrl(): string | null {

@@ -5,8 +5,6 @@ import md5 from "md5";
 import { redirect } from "next/navigation";
 import { drizzle } from "drizzle-orm/libsql";
 import * as schema from "@/db/schema";
-// console.log("{ schema }");
-// console.log({ schema });
 
 const turso = createTursoClient({
   token: process.env.TURSO_API_TOKEN!,
@@ -72,7 +70,6 @@ function getDatabaseUrl(dbName: string | null): string | null {
 function getLibsqlUrl(): string | null {
   const dbName = getDatabaseName();
   const url = getDatabaseUrl(dbName);
-  // console.log({ url });
   return url ? `libsql://${url}` : null;
 }
 

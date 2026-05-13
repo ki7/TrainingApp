@@ -48,12 +48,7 @@ export default function MuscleMapPage() {
   }, []);
 
   function iframeOnLoad(e: React.SyntheticEvent<HTMLIFrameElement, Event>) {
-    // console.log("iframe loaded", { e }, window, window.HumanAPI);
-    console.log("iframe loaded", window.HumanAPI);
     var human = new window.HumanAPI("myViewer");
-    // const iframe = iframeRef.current;
-    // const human = new (iframe.contentWindow as any).HumanAPI("myViewer");
-    console.log({ human });
 
     setSelectedHuman(human);
 
@@ -112,8 +107,7 @@ export default function MuscleMapPage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-slate-50 p-4">
       <HumanAPI_Button
-        onClick={() => {
-          console.log("Get structures");
+        onClick={() => {          
           humanApi.on("scene.objectsSelected", function (event: any) {
             var selected: string[] = [];
             var deselected: string[] = [];
@@ -128,8 +122,7 @@ export default function MuscleMapPage() {
               }
             });
 
-            console.log("Selected objects: " + selected.join(", "));
-            console.log("Deslected objects: " + deselected.join(", "));
+           
           });
           humanApi.send("human.info", function (human: any) {
             console.log("Gathering human info:");

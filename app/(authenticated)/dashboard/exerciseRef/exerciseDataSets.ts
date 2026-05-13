@@ -16,8 +16,6 @@ const exercises = EXERCISES.reduce(
   {} as Record<string, Sets>,
 );
 
-// console.log({ exercises: Object.keys(exercises) });
-
 const muscles = new Set();
 EXERCISES.reduce((muscles, exercises) => {
   Object.keys(exercises.muscles).forEach((key) => {
@@ -26,16 +24,6 @@ EXERCISES.reduce((muscles, exercises) => {
 
   return muscles;
 }, muscles);
-
-/* const test = EXERCISES.reduce((muscles, exercises) => {
-  Object.keys(exercises.muscles).forEach((key) => {
-    muscles = [...muscles, ...exercises.muscles[key] as string[]];
-  });
-
-  return muscles;
-}, []);
-console.log({ test }); */
-console.log({ muscles });
 
 export const SETS: Sets[] = [
   {

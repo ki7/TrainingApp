@@ -16,7 +16,6 @@ export default function RenfoTrainingPage() {
 
     // simulate async save
     await new Promise((r) => setTimeout(r, 600));
-    console.log(" Saving session:", {});
     dispatch({ type: "END_SAVING" });
   };
   return (

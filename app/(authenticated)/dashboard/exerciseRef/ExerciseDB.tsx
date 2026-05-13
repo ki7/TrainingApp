@@ -18,7 +18,6 @@ export default function ExerciseDB() {
   const [filterCat, setFilterCat] = useState<Category | "">("");
   const [filterLat, setFilterLat] = useState<Laterality | "">("");
   const [filterGroup, setFilterGroup] = useState("");
- console.log(SETS);
  
   const filtered = useMemo(() => {
     const q = search.toLowerCase();

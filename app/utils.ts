@@ -29,7 +29,7 @@ export async function checkDatabaseExists(): Promise<boolean> {
 
 export async function getDatabaseClient() {
   const url = getLibsqlUrl();
-
+  
   if (!url) {
     console.error("Failed to create database client: URL is null.");
     return redirect("/welcome");
@@ -39,6 +39,8 @@ export async function getDatabaseClient() {
       url,
       authToken: process.env.TURSO_GROUP_AUTH_TOKEN,
     });
+    console.error({client});
+    return drizzle(client, { schema });
   } catch (error) {
     console.error("Failed to create database client:", error);
     return drizzle(createLibsqlClient({ url: "file:dummy", authToken: "" }), {

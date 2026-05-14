@@ -1,11 +1,11 @@
 "use client";
 
-import { useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import { useRef } from "react";
 import clsx from "clsx";
-import styles from "./ButtonX.module.css";
-import { Elastic, SlowMo } from "gsap/all";
 import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { Elastic, SlowMo } from "gsap/all";
+import styles from "./ButtonX.module.css";
 
 gsap.registerPlugin(useGSAP);
 
@@ -37,7 +37,7 @@ export const ButtonX: React.FC<ButtonProps> = ({
     (success && styles.success) ||
     styles.primary; // fallback
 
-  const rootRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLButtonElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const filterRef = useRef<SVGFEGaussianBlurElement>(null);
 
@@ -57,6 +57,19 @@ export const ButtonX: React.FC<ButtonProps> = ({
       // console.log(root, styles["top-left"], circlesTopLeft);
       console.log(cls.topLeft, cls.bottomRight);
 
+      // TODO: Refactor timelines to be more efficient and less redundant
+      /* 
+        - use utility to avoid the querySelector
+        - use the ref to keep the timeline and stop recreating it
+        exemple
+        const boxes = gsap.utils.toArray('.box');
+      tl.current = gsap
+        .timeline()
+        .to(boxes[0], { x: 120, rotation: 360 })
+        .to(boxes[1], { x: -120, rotation: -360 }, '<')
+        .to(boxes[2], { y: -166 })
+        .reverse();
+       */
       const tl = gsap.timeline();
       const tl2 = gsap.timeline();
 

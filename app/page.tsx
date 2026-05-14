@@ -3,8 +3,8 @@ import { redirect } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
 import IconDragon from "@/app/Icon-dragon";
 
-export default function Page() {
-  const { userId } = auth();
+export default async function Page() {
+  const { userId } = await auth();
 
   if (userId) return redirect("/dashboard");
 

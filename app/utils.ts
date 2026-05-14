@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs/server";
+// import { auth } from "@clerk/nextjs/server";
 import { createClient as createLibsqlClient } from "@libsql/client";
 import { createClient as createTursoClient } from "@tursodatabase/api";
 import md5 from "md5";
@@ -59,8 +59,9 @@ export async function getDatabaseClient() {
 }
 
 export function getDatabaseName(): string | null {
-  const userId = auth().userId;
-  return userId ? md5(userId) : null;
+  // const userId = auth().userId;
+  // return userId ? md5(userId) : null;
+  return "c03b5e1feb5a68efb32f221f3836bab1";
 }
 
 function getDatabaseUrl(dbName: string | null): string | null {

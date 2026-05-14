@@ -1,0 +1,133 @@
+/* components/Button/ButtonX.module.css */
+
+
+/* Active */
+.button:active {
+  /*   transform: translateY(0);
+  box-shadow:
+    0 0 0 1px var(--btn-border),
+    0 4px 12px rgba(0, 0, 0, 0.25); */
+}
+
+/* Disabled */
+.button:disabled {
+  /*   opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none; */
+}
+
+.svg-filters {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+
+.base {
+  --blue: #6395ff;
+  --dark-blue: #3f65b7;
+  --action-color: var(--dark-blue);
+  --bg-color: var(--blue);
+
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+  border: none;
+  border-radius: 1em;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.85em;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.1em;
+  color: white;
+  padding: 1em 2em;
+  /* text-transform: uppercase; */
+  transition: background-color 0.1s ease-out;
+
+  &:hover {
+    background-color: var(--action-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.gooffyFx {
+  /* -webkit-filter: url("#filter-goo-1");
+  filter: url("/#filter-goo-1"); */
+  position: relative;
+  /* margin: 1em; */
+  z-index: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.gooffyFx:hover,
+.gooffyFx:hover .circle,
+.gooffyFx:hover .button__bg {
+  background-color: var(--action-color);
+}
+
+.secondary , .secondary .button__bg {
+  --bg-color: rgb(100, 217, 235); 
+  --action-color: rgb(80, 176, 190); 
+}
+
+.success , .success .button__bg {
+  --bg-color: rgb(5, 196, 30); 
+  --action-color: rgb(14, 154, 4); 
+}
+
+.danger , .danger .button__bg {
+  --bg-color: rgb(189, 75, 115); 
+  --action-color: rgb(155, 42, 99); 
+}
+
+
+& .button__container {
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 400%;
+  top: -150%;
+  left: -50%;
+  pointer-events: none;
+  z-index: -1;
+  transform: translateZ(0);
+  transition: all 0.1s ease-out;
+}
+
+.button__bg {
+  position: absolute;
+  width: 50%;
+  height: 25%;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+}
+
+.circle {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  /* background-color: var(--bg-color); */
+  transition: background-color 0.1s ease-out;
+  z-index: -1;
+
+  &.top-left {
+    top: 40%;
+    left: 27%;
+  }
+
+  &.bottom-right {
+    bottom: 40%;
+    right: 27%;
+  }
+}

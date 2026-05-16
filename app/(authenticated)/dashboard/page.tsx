@@ -1,3 +1,5 @@
+import { Button } from "./comps";
+
 export default async function Page() {
   return (
     <div className="space-y-3">
@@ -5,9 +7,7 @@ export default async function Page() {
         <h1 className="text-3xl font-black tracking-tight text-black">
           Dashboard
         </h1>
-        <h2 className="text-2xl font-black tracking-tight text-black mt-10">
-          Pages
-        </h2>       
+        <Button />
       </div>
     </div>
   );

@@ -1,0 +1,700 @@
+{
+  "sessions": [
+    {
+      "date": "2026-03-13",
+      "title": "Session renfo",
+      "exercises": [
+        {
+          "name": "HAMMER STRENGTH ISO-LATERAL FRONT LAT PULLDOWN",
+          "sets": [
+            { "reps": 10, "weight": 60, "unit": "kg" },
+            { "reps": 11, "weight": 60, "unit": "kg" },
+            { "reps": 9, "weight": 60, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "HAMMER STRENGTH PULLOVER",
+          "notes": "(10/Start 18lb./8.2Kg.)",
+          "sets": [
+            { "reps": 12, "weight": 10, "unit": "kg" },
+            { "reps": 14, "weight": 20, "unit": "kg" },
+            { "reps": 11, "weight": 30, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "LAT PULLDOWN",
+          "sets": [
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            {
+              "reps": 9,
+              "weight": 42.5,
+              "unit": "kg",
+              "notes": "prise la plus large"
+            },
+            { "reps": 10, "weight": 42.5, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "SHOULDER PRESS (pronation)",
+          "sets": [
+            { "reps": 10, "weight": 40, "unit": "kg" },
+            { "reps": 7, "weight": 40, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "TRIAGE HORIZONTALE DOUBLE POULIE",
+          "sets": [
+            { "reps": 10, "weight": 20, "unit": "kg" },
+            {
+              "reps": 15,
+              "weight": 35,
+              "unit": "kg",
+              "notes": "jambe plus tendue sur pose écartée"
+            }
+          ]
+        },
+        {
+          "name": "Traction assisté (Supination)",
+          "sets": [
+            { "reps": 10, "assist": 50, "unit": "kg" },
+            { "reps": 10, "assist": 50, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Chest Fly (écarté couché)",
+          "sets": [
+            { "reps": 7, "weight": 50, "unit": "kg", "duration": "40s" },
+            { "reps": 15, "weight": 35, "unit": "kg", "duration": "40s" },
+            { "reps": 12, "weight": 42.5, "unit": "kg", "duration": "40s" },
+            { "reps": 10, "weight": 50, "unit": "kg", "duration": "40s" }
+          ]
+        },
+        {
+          "name": "Chest Press (bute développé)",
+          "sets": [
+            { "reps": 15, "weight": 40, "unit": "kg" },
+            { "reps": 11, "weight": 50, "unit": "kg" },
+            { "reps": 8, "weight": 50, "unit": "kg" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "date": "2026-03-26",
+      "exercises": [
+        {
+          "name": "ISO latéral row 5,4",
+          "notes": "pronation supination *2 hautes et basses + 1 neutre ; manque 1ere série sur app exercice",
+          "sets": [
+            { "reps": 20, "weight": 50, "unit": "kg", "notes": "neutre" },
+            {
+              "reps": 12,
+              "weight": 60,
+              "unit": "kg",
+              "notes": "pronation prise du bas"
+            },
+            {
+              "reps": 12,
+              "weight": 60,
+              "unit": "kg",
+              "notes": "pronation prise du haut"
+            },
+            {
+              "reps": 12,
+              "weight": 60,
+              "unit": "kg",
+              "notes": "pronation prise du haut"
+            },
+            {
+              "reps": 12,
+              "weight": 60,
+              "unit": "kg",
+              "notes": "pronation prise du bas ; douleur début avant-bras (début déchirure?)"
+            }
+          ]
+        },
+        {
+          "name": "ISO latéral shoulder press 4,5k",
+          "notes": "chaise à 6",
+          "sets": [
+            {
+              "reps": 12,
+              "weight": 40,
+              "unit": "kg",
+              "notes": "douleur redescendre coude gauche"
+            },
+            { "reps": 9, "weight": 40, "unit": "kg" },
+            { "reps": 7, "weight": 40, "unit": "kg" },
+            { "reps": 10, "weight": 30, "unit": "kg" },
+            { "reps": 6, "weight": 30, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Abdominal oblique crunch",
+          "sets": [
+            { "reps": 10, "weight": 15, "unit": "kg" },
+            { "reps": 10, "weight": 15, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Hack squat 57k",
+          "sets": [
+            { "reps": 15, "weight": 0, "unit": "kg" },
+            { "reps": 12, "weight": 0, "unit": "kg" },
+            { "reps": 14, "weight": 0, "unit": "kg" },
+            { "reps": 14, "weight": 0, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "ISO last leg extension 1,8",
+          "sets": [
+            { "reps": 10, "weight": 20, "unit": "kg" },
+            {
+              "reps": 10,
+              "weight": 20,
+              "unit": "kg",
+              "notes": "tremble fort sur la redescente"
+            }
+          ]
+        }
+      ],
+      "notes": "Salle chargée jusqu’à 12h30"
+    },
+
+    {
+      "date": "2026-03-27",
+      "exercises": [
+        {
+          "name": "Fly chest",
+          "sets": [
+            { "reps": 27, "weight": 20, "unit": "kg" },
+            { "reps": 25, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 52.5, "unit": "kg" },
+            { "reps": 9, "weight": 55, "unit": "kg" },
+            { "reps": 9, "weight": 52.5, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "SHOULDER PRESS (pronation)",
+          "sets": [
+            { "reps": 12, "weight": 17.5, "unit": "kg", "notes": "ou 35 ?" },
+            { "reps": 10, "weight": 17.5, "unit": "kg", "notes": "ou 35 ?" }
+          ]
+        },
+        {
+          "name": "TRIAGE HORIZONTALE DOUBLE POULIE monoprise",
+          "notes": "Première série récupérée sur l'appli",
+          "sets": [
+            {
+              "reps": 15,
+              "weight": 13.75,
+              "unit": "kg",
+              "notes": "jambe plus tendue sur pose écartée"
+            },
+            { "reps": 15, "weight": 17.5, "unit": "kg" },
+            { "reps": 15, "weight": 17.5, "unit": "kg" },
+            { "reps": 20, "weight": 17.5, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Biceps seated 1.8kg",
+          "sets": [
+            { "reps": 6, "weight": 20, "unit": "kg" },
+            { "reps": 14, "weight": 10, "unit": "kg" },
+            { "reps": 12, "weight": 10, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Rameur",
+          "duration": "5 minutes",
+          "notes": "force"
+        }
+      ]
+    },
+
+    {
+      "date": "2026-03-30",
+      "location": "Voltaire",
+      "exercises": [
+        {
+          "name": "Papillon épaule extérieur",
+          "sets": [
+            { "reps": 17, "weight": 25, "unit": "kg" },
+            { "reps": 12, "weight": 30, "unit": "kg" },
+            { "reps": 11, "weight": 30, "unit": "kg" },
+            { "reps": 14, "weight": 25, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Poulie tirage mono prise",
+          "sets": [
+            { "reps": 15, "weight": 30, "unit": "kg" },
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            { "reps": 15, "weight": 40, "unit": "kg" },
+            { "reps": 15, "weight": 40, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Poulie tirage (2e bloc)",
+          "sets": [
+            { "reps": 15, "weight": 30, "unit": "kg" },
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            { "reps": 14, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 40, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Abdo crunch",
+          "sets": [
+            { "reps": 16, "weight": 25, "unit": "kg" },
+            { "reps": 15, "weight": 30, "unit": "kg" },
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            { "reps": 15, "weight": 40, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Machine inconnue (photo)",
+          "sets": [
+            { "reps": 15, "weight": 61, "unit": "kg" },
+            { "reps": 20, "weight": 77, "unit": "kg" },
+            { "reps": 17, "weight": 85, "unit": "kg" },
+            { "reps": 17, "weight": 93, "unit": "kg" },
+            { "reps": 17, "weight": 101, "unit": "kg" }
+          ],
+          "time": "14h22"
+        },
+        {
+          "name": "Biceps curl",
+          "sets": [
+            { "reps": 15, "weight": 20, "unit": "kg" },
+            { "reps": 12, "weight": 25, "unit": "kg" },
+            { "reps": 9, "weight": 25, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Lombaire",
+          "sets": [
+            { "reps": 15 },
+            { "reps": 10 },
+            { "reps": 10 },
+            { "reps": 12 }
+          ]
+        }
+      ]
+    },
+
+    {
+      "date": "2026-04-01",
+      "exercises": [
+        {
+          "name": "Hack squat",
+          "sets": [
+            { "reps": 12, "weight": 57, "unit": "kg" },
+            { "reps": 12 },
+            { "reps": 14 },
+            { "reps": 16 }
+          ]
+        },
+        {
+          "name": "ISO lateral kneeling leg curl",
+          "notes": "douleur/crampe mollet bas de cuisse",
+          "sets": [
+            { "reps": 12, "weight": 15, "unit": "kg" },
+            { "reps": 12, "weight": 20, "unit": "kg" },
+            { "reps": 12, "weight": 25, "unit": "kg" },
+            { "reps": 12, "weight": 25, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Back extension",
+          "sets": [
+            { "reps": 10, "weight": 20, "unit": "kg" },
+            { "reps": 7, "weight": 20, "unit": "kg" },
+            { "reps": 5, "weight": 0, "unit": "kg" },
+            { "reps": 12, "weight": 0, "unit": "kg" },
+            { "reps": 12, "weight": 0, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Chest press",
+          "sets": [
+            { "reps": 18, "weight": 20, "unit": "kg", "notes": "ou 40 ?" },
+            { "reps": 13, "weight": 27.5, "unit": "kg" },
+            { "reps": 13, "weight": 27.5, "unit": "kg" },
+            { "reps": 13, "weight": 27.5, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Lever de jambe sur demi-lune",
+          "sets": [
+            { "reps": 10, "notes": "jambes droites" },
+            { "reps": 10, "notes": "genou plié" },
+            { "reps": 9, "notes": "genou plié" }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "title": "Renfo 2",
+      "exercises": [
+        {
+          "name": "Triceps extension",
+          "sets": [
+            { "reps": 13, "weight": 35, "unit": "kg" },
+            { "reps": 13, "weight": 35, "unit": "kg" },
+            { "reps": 13, "weight": 35, "unit": "kg" },
+            { "reps": 13, "weight": 35, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Leg extension",
+          "sets": [
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            { "reps": 14, "weight": 42.5, "unit": "kg" },
+            { "reps": 15, "weight": 42.5, "unit": "kg" },
+            { "reps": 15, "weight": 45, "unit": "kg" },
+            {
+              "reps": 15,
+              "weight": 47.5,
+              "unit": "kg",
+              "notes": "douleur genou gauche type crampe"
+            }
+          ]
+        },
+        {
+          "name": "Tirage horizontal double poulie",
+          "sets": [
+            { "reps": 15, "weight": 21.25, "unit": "kg" },
+            { "reps": 14, "weight": 25, "unit": "kg" },
+            { "reps": 14, "weight": 25, "unit": "kg" },
+            { "reps": 12, "weight": 25, "unit": "kg", "notes": "fail" }
+          ]
+        },
+        {
+          "name": "Hip machine",
+          "notes": "Écartement 7",
+          "sets": [
+            { "reps": 16, "weight": 57.5, "unit": "kg" },
+            { "reps": 13, "weight": 72.5, "unit": "kg" },
+            { "reps": 14, "weight": 75, "unit": "kg" },
+            { "reps": 15, "weight": 75.5, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Seated leg curl",
+          "sets": [
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            { "reps": 15, "weight": 35, "unit": "kg" },
+            { "reps": 15, "weight": 37.5, "unit": "kg" },
+            { "reps": 17, "weight": 40, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "HAMMER STRENGTH ISO-LATERAL FRONT LAT PULLDOWN",
+          "sets": [
+            { "reps": 12, "weight": 60, "unit": "kg" },
+            { "reps": 10, "weight": 60, "unit": "kg" },
+            { "reps": 12, "weight": 55, "unit": "kg" },
+            { "reps": 12, "weight": 55, "unit": "kg", "notes": "fail" }
+          ]
+        },
+        {
+          "name": "ISO lat horizontal bench press",
+          "sets": [
+            { "reps": 11, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 30, "unit": "kg" },
+            { "reps": 6, "weight": 30, "unit": "kg" },
+            { "reps": 9, "weight": 20, "unit": "kg", "notes": "fail" }
+          ]
+        },
+        {
+          "name": "Back extension",
+          "sets": [
+            { "reps": 15 },
+            { "reps": 13 },
+            { "reps": 12 },
+            { "reps": 12 }
+          ]
+        },
+        {
+          "name": "Rameur",
+          "duration": "15 minutes"
+        },
+        {
+          "name": "Dead hang",
+          "sets": [{ "duration": "30s" }, { "duration": "30s" }]
+        }
+      ]
+    },
+
+    {
+      "date": "2026-05-19",
+      "title": "Renfo",
+      "exercises": [
+        {
+          "name": "Low row prise triangle",
+          "sets": [
+            { "reps": 20, "weight": 42.5, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 60, "unit": "kg" },
+            { "reps": 12, "weight": 60, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Biceps curl HS",
+          "sets": [
+            { "reps": 7, "weight": 25, "unit": "kg" },
+            { "reps": 7, "weight": 25, "unit": "kg" },
+            { "reps": 6, "weight": 25, "unit": "kg" },
+            { "reps": 8, "weight": 20, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "ISO-LATERAL HORIZONTAL BENCH PRESS",
+          "notes": "Start 18lbs./8.2kg",
+          "sets": [
+            { "reps": 12, "weight": 10, "unit": "kg" },
+            { "reps": 12, "weight": 30, "unit": "kg" },
+            {
+              "reps": 12,
+              "weight": 40,
+              "unit": "kg",
+              "notes": "dernière en uni"
+            },
+            {
+              "reps": 12,
+              "weight": 40,
+              "unit": "kg",
+              "notes": "dernière en uni"
+            }
+          ]
+        },
+        {
+          "name": "Seated dip",
+          "notes": "Start 4lbs./1.8kg",
+          "sets": [
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 60, "unit": "kg" },
+            { "reps": 10, "weight": 60, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Lat pulldown",
+          "sets": [
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 60, "unit": "kg" },
+            { "reps": 9, "weight": 60, "unit": "kg", "notes": "+ 3 x 50" },
+            { "reps": 7, "weight": 60, "unit": "kg", "notes": "+ 5 x 50" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "date": "2026-05-06",
+      "title": "Renfo",
+      "exercises": [
+        {
+          "name": "ISO lateral bench press",
+          "notes": "Bi et uni 50/50",
+          "sets": [
+            { "reps": 6, "weight": 20, "unit": "kg", "notes": "+ 6 x 10 (x2)" },
+            { "reps": 25, "weight": 12.25, "unit": "kg" },
+            { "reps": 30, "weight": 15, "unit": "kg" },
+            { "reps": 30, "weight": 15, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Seated dips",
+          "sets": [
+            { "reps": 12, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 55, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Hack squat 57kg b",
+          "sets": [
+            { "reps": 12 },
+            { "reps": 12, "notes": "+5" },
+            { "reps": 12, "notes": "+5" },
+            { "reps": 12, "notes": "+10" },
+            { "reps": 12, "notes": "+15" }
+          ]
+        },
+        {
+          "name": "ISO lateral kneeling leg curl",
+          "notes": "Uni ; sensation muscle va se déchirer",
+          "sets": [
+            { "reps": 12, "weight": 25, "unit": "kg", "notes": "x2" },
+            { "reps": 12, "weight": 25, "unit": "kg", "notes": "x2" },
+            {
+              "reps": 9,
+              "weight": 20,
+              "unit": "kg",
+              "notes": "x2 + 5 x 20 x2"
+            },
+            {
+              "reps": 12,
+              "weight": 20,
+              "unit": "kg",
+              "notes": "pause 5s à la 9e"
+            }
+          ]
+        },
+        {
+          "name": "Linear leg press 53kg b",
+          "sets": [
+            { "reps": 15 },
+            { "reps": 15, "weight": 20, "unit": "kg" },
+            { "reps": 15, "weight": 30, "unit": "kg" },
+            { "reps": 15, "weight": 40, "unit": "kg" },
+            { "reps": 25, "weight": 40, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Belt squat 30.8kg b",
+          "sets": [{ "reps": 12 }]
+        },
+        {
+          "name": "Superset Fly x Rear Deltoid Papillon",
+          "sets": [
+            { "reps": 15, "weight": 40, "unit": "kg", "notes": "x2" },
+            { "reps": 15, "weight": 45, "unit": "kg", "notes": "x2" },
+            { "reps": 15, "weight": 47.5, "unit": "kg", "notes": "x2" },
+            {
+              "reps": 15,
+              "weight": 50,
+              "unit": "kg",
+              "notes": "x2 ; pause à partir de la 8e"
+            }
+          ]
+        },
+        {
+          "name": "Abdominal crunch Life Fitness",
+          "notes": "Dans les jambes qui soulèvent",
+          "sets": [
+            { "reps": 12, "weight": 30, "unit": "kg" },
+            { "reps": 15, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 18, "weight": 50, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Plated load",
+          "url": "https://gym80.de/produkt/4363/",
+          "notes": "Mix bi et unilateral",
+          "sets": [
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "PURE KRAFT - Strong Negativdrückbank Dual",
+          "url": "https://gym80.de/produkt/4362/",
+          "sets": [
+            { "reps": 12, "weight": 10, "unit": "kg" },
+            { "reps": 12, "weight": 10, "unit": "kg" },
+            { "reps": 12, "weight": 10, "unit": "kg" },
+            { "reps": 10, "weight": 10, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Back extension",
+          "sets": [
+            { "reps": 14 },
+            { "reps": 14 },
+            { "reps": 14 },
+            { "reps": 14 }
+          ]
+        },
+        {
+          "name": "Abdo",
+          "sets": [
+            { "reps": 12 },
+            { "reps": 12 },
+            { "reps": 10, "notes": "fail" }
+          ]
+        },
+        {
+          "name": "Papillon",
+          "sets": [
+            { "reps": 12, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 30, "unit": "kg" },
+            { "reps": 12, "weight": 25, "unit": "kg" }
+          ]
+        }
+      ]
+    },
+
+    {
+      "date": "2026-05-04",
+      "title": "Renfo",
+      "exercises": [
+        {
+          "name": "ISO-LATERAL BENCH PRESS",
+          "notes": "Start 7lbs./3.2kg",
+          "sets": [
+            { "reps": 15, "weight": 20, "unit": "kg" },
+            { "reps": 12, "weight": 20, "unit": "kg" },
+            { "reps": 12, "weight": 20, "unit": "kg" },
+            { "reps": 12, "weight": 20, "unit": "kg" },
+            { "reps": 13, "weight": 10, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Lat pulldown",
+          "sets": [
+            { "reps": 14, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" },
+            { "reps": 12, "weight": 50, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Low Row (grip mono double)",
+          "sets": [
+            { "reps": 12, "weight": 42.5, "unit": "kg" },
+            { "reps": 13, "weight": 42.5, "unit": "kg" },
+            { "reps": 13, "weight": 42.5, "unit": "kg" },
+            { "reps": 15, "weight": 50, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Triceps extension",
+          "sets": [
+            { "reps": 15, "weight": 37.5, "unit": "kg" },
+            { "reps": 12, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 40, "unit": "kg" },
+            { "reps": 12, "weight": 35, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Biceps curl (fitness club mech)",
+          "sets": [
+            { "reps": 12, "weight": 35, "unit": "kg" },
+            { "reps": 12, "weight": 35, "unit": "kg" },
+            { "reps": 12, "weight": 35, "unit": "kg" },
+            { "reps": 12, "weight": 35, "unit": "kg" }
+          ]
+        },
+        {
+          "name": "Rear deltoid papillon",
+          "sets": [
+            { "reps": 14, "weight": 37.5, "unit": "kg" },
+            { "reps": 12, "weight": 40, "unit": "kg" },
+            { "reps": 8, "weight": 40, "unit": "kg", "notes": "+ 4 x 35" },
+            { "reps": 12, "weight": 35, "unit": "kg" }
+          ]
+        }
+      ]
+    }
+  ]
+}

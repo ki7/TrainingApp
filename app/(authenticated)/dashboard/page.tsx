@@ -1,4 +1,8 @@
 import { Button } from "./comps";
+import workoutSessions from "../../../db/sourcesJson/workoutSessions.json";
+import SessionsSummary from "@/ui/SessionsSummary";
+
+
 
 export default async function Page() {
   return (
@@ -7,6 +11,7 @@ export default async function Page() {
         <h1 className="text-3xl font-black tracking-tight text-black">
           Dashboard
         </h1>
+        <SessionsSummary sessions={workoutSessions.sessions} />
         <Button />
       </div>
     </div>

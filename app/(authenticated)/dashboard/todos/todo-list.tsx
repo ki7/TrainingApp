@@ -31,6 +31,7 @@ export function TodoList({ initialTodos }: { initialTodos: Todo[] }) {
     const description = formData.get("description") as string;
     const newTodo = {
       id: Date.now(), // Temporary ID
+      tenantId: "tenant-id-placeholder", // Replace with actual tenant ID
       description,
       completed: false,
     };

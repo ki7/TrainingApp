@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { checkDatabaseExists, createUserDatabase } from "../utils";
 
 export async function GET() {
-  const { userId } = auth().protect();
+  const { userId } = await auth.protect();
 
   const databaseExists = await checkDatabaseExists();
 

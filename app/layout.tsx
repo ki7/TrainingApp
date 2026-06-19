@@ -7,8 +7,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "Turso Per User Starter",
-  description: "Database per user starter with Turso, Clerk, and SQLite",
+  title: "Assoumax app",
+  description: "Assoumax dojo project",
 };
 
 export default function RootLayout({
@@ -17,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider dynamic>
       <html lang="en">
-        <body className={`bg-rich-black overscroll-none ${inter.className}`}>
+        <body className={`bg-rich-white overscroll-none ${inter.className}`}>
           {children}
         </body>
       </html>

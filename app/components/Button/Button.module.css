@@ -1,0 +1,87 @@
+/* components/Button/Button.module.css */
+
+.button {
+  --btn-bg: rgba(255, 255, 255, 0.15);
+  --btn-border: rgba(255, 255, 255, 0.25);
+  --btn-glow: rgba(255, 255, 255, 0.35);
+
+  position: relative;
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: white;
+  border-radius: 12px;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition:
+    background 160ms ease,
+    box-shadow 160ms ease,
+    transform 120ms ease;
+  overflow: hidden;
+}
+
+/* Glow interne */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at top, var(--btn-glow), transparent 60%);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Hover */
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 1px var(--btn-border),
+    0 8px 22px rgba(0, 0, 0, 0.35);
+}
+
+/* Active */
+.button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 0 1px var(--btn-border),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Disabled */
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ---------------------- */
+/* 🎨 Variantes (tokens)  */
+/* ---------------------- */
+
+.primary {
+  --btn-bg: rgba(56, 132, 255, 0.35);
+  --btn-border: rgba(56, 132, 255, 0.45);
+  --btn-glow: rgba(56, 132, 255, 0.55);
+}
+
+.secondary {
+  --btn-bg: rgba(120, 120, 128, 0.35);
+  --btn-border: rgba(120, 120, 128, 0.45);
+  --btn-glow: rgba(120, 120, 128, 0.55);
+}
+
+.success {
+  --btn-bg: rgba(48, 209, 88, 0.35);
+  --btn-border: rgba(48, 209, 88, 0.45);
+  --btn-glow: rgba(48, 209, 88, 0.55);
+}
+
+.danger {
+  --btn-bg: rgba(255, 69, 58, 0.35);
+  --btn-border: rgba(255, 69, 58, 0.45);
+  --btn-glow: rgba(255, 69, 58, 0.55);
+}

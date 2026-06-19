@@ -1,0 +1,199 @@
+.container {
+  padding: 1.5rem 0;
+  font-family: var(--font-sans, system-ui, sans-serif);
+}
+
+/* ── Controls ─────────────────────────────────────────────────────────────── */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 180px;
+  height: 36px;
+  padding: 0 12px;
+  font-size: 13px;
+  color: var(--color-text-primary, #1a1a18);
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--color-border-secondary, rgba(0,0,0,0.2));
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.searchInput:focus {
+  border-color: var(--color-border-primary, rgba(0,0,0,0.35));
+}
+
+.select {
+  height: 36px;
+  padding: 0 10px;
+  font-size: 13px;
+  color: var(--color-text-primary, #1a1a18);
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--color-border-secondary, rgba(0,0,0,0.2));
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.select:focus {
+  border-color: var(--color-border-primary, rgba(0,0,0,0.35));
+}
+
+.count {
+  font-size: 12px;
+  color: var(--color-text-tertiary, rgba(0,0,0,0.4));
+  white-space: nowrap;
+  align-self: center;
+}
+
+/* ── Card ─────────────────────────────────────────────────────────────────── */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: var(--color-background-primary, #fff);
+  border: 0.5px solid var(--color-border-tertiary, rgba(0,0,0,0.1));
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.exerciseName {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary, #1a1a18);
+  line-height: 1.4;
+}
+
+/* ── Badges ───────────────────────────────────────────────────────────────── */
+
+.badges {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* Category badges */
+.cat_machine    { background: #FAEEDA; color: #854F0B; }
+.cat_bodyweight { background: #EAF3DE; color: #3B6D11; }
+.cat_barbell    { background: #FCEBEB; color: #A32D2D; }
+.cat_dumbbell   { background: #EEEDFE; color: #534AB7; }
+
+/* Laterality badges */
+.lat_bilateral  { background: #E6F1FB; color: #185FA5; }
+.lat_unilateral { background: #E1F5EE; color: #0F6E56; }
+.lat_both       { background: #EEEDFE; color: #534AB7; }
+
+/* ── Muscle rows ──────────────────────────────────────────────────────────── */
+
+.muscleRows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.muscleRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.tierLabel {
+  font-size: 11px;
+  font-weight: 500;
+  min-width: 76px;
+  padding-top: 3px;
+  white-space: nowrap;
+}
+
+.tierPrimary   { color: #A32D2D; }
+.tierSecondary { color: #854F0B; }
+.tierTertiary  { color: var(--color-text-secondary, rgba(0,0,0,0.5)); }
+
+.muscleList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  border: 0.5px solid transparent;
+}
+
+.tagPrimary {
+  background: #FCEBEB;
+  color: #A32D2D;
+  border-color: #F7C1C1;
+}
+
+.tagSecondary {
+  background: #FAEEDA;
+  color: #854F0B;
+  border-color: #FAC775;
+}
+
+.tagTertiary {
+  background: var(--color-background-secondary, #f5f4ef);
+  color: var(--color-text-tertiary, rgba(0,0,0,0.4));
+  border-color: var(--color-border-tertiary, rgba(0,0,0,0.1));
+}
+
+/* ── Empty state ──────────────────────────────────────────────────────────── */
+
+.empty {
+  text-align: center;
+  color: var(--color-text-tertiary, rgba(0,0,0,0.4));
+  font-size: 13px;
+  padding: 2rem 0;
+}
+
+/* ── Dark mode ────────────────────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  .cat_machine    { background: #633806; color: #FAC775; }
+  .cat_bodyweight { background: #27500A; color: #C0DD97; }
+  .cat_barbell    { background: #791F1F; color: #F7C1C1; }
+  .cat_dumbbell   { background: #3C3489; color: #CECBF6; }
+
+  .lat_bilateral  { background: #0C447C; color: #B5D4F4; }
+  .lat_unilateral { background: #085041; color: #9FE1CB; }
+  .lat_both       { background: #3C3489; color: #CECBF6; }
+
+  .tagPrimary   { background: #791F1F; color: #F7C1C1; border-color: #A32D2D; }
+  .tagSecondary { background: #633806; color: #FAC775; border-color: #854F0B; }
+
+  .tierPrimary   { color: #F09595; }
+  .tierSecondary { color: #FAC775; }
+}

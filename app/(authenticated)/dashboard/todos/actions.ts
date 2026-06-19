@@ -18,7 +18,7 @@ export const addTodo = async (formData: FormData) => {
   if (!client) return null;
 
   await client.insert(schema.todos).values({
-    description,
+    description
   });
 
   revalidatePath("/dashboard");

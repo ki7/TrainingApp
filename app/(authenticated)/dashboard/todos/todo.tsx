@@ -20,7 +20,7 @@ export function Todo({
   const [_, startTransition] = useTransition();
 
   return (
-    <li className="flex items-center justify-between rounded bg-white/5 p-6 text-white">
+    <li className="flex items-center justify-between rounded bg-white/5 p-6 text-black">
       <div className="flex w-full items-center space-x-3 ">
         <button
           className="p-1 text-3xl"

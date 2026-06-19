@@ -16,7 +16,7 @@ export function Form({ onSubmit }: { onSubmit: (formData: FormData) => void }) {
   return (
     <form
       action={handleSubmit}
-      className="flex items-center justify-between rounded bg-brunswick-green p-6 shadow-sm"
+      className="flex items-center justify-between rounded bg-blue-300 p-6 shadow-sm"
       ref={formRef}
     >
       <div className="flex w-full items-center space-x-3">
@@ -25,7 +25,7 @@ export function Form({ onSubmit }: { onSubmit: (formData: FormData) => void }) {
           id="description"
           name="description"
           placeholder="Insert new todo"
-          className="w-full text-white bg-transparent placeholder:text-white/30 outline-none"
+          className="w-full text-black bg-transparent placeholder:text-black/30 outline-none"
           required
           aria-label="Description of todo"
           type="text"

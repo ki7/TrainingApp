@@ -3,7 +3,7 @@ import { auth } from "@clerk/nextjs/server";
 import { getDumpUrl } from "@/app/utils";
 
 export async function GET() {
-  auth().protect();
+  await auth.protect();
 
   const url = getDumpUrl();
 
